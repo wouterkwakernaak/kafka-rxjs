@@ -1,0 +1,11 @@
+{
+  "name": "kafka-rxjs",
+  "version": "0.0.1",
+  "main": "app.js",
+  "author": "Wouter Kwakernaak",
+  "license": "MIT",
+  "dependencies": {
+    "kafka-node": "^0.2.24",
+    "rx": "^2.4.3"
+  }
+}

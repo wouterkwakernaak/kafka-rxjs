@@ -7,7 +7,7 @@ consumer.on('error', function(err) {
 	console.log(err);
 });
 
-var source = Rx.Observable.fromEvent(consumer, 'message')
+var source = Rx.Observable.fromEvent(consumer, 'message');
 var subscription = source.subscribe(function (message) {
   console.log(message);
 });

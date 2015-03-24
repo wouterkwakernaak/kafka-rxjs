@@ -7,7 +7,14 @@ consumer.on('error', function(err) {
 	console.log(err);
 });
 
-var source = Rx.Observable.fromEvent(consumer, 'message');
+var source = Rx.Observable.fromEvent(consumer, 'message')
+				.map(function(message) {
+					return message.value;
+				})
+				.scan('start', function(acc, x) {
+					return acc + x;
+				});
+
 var subscription = source.subscribe(function (message) {
   console.log(message);
 });
